@@ -49,7 +49,7 @@
                 img: `https://picsum.photos/200/200?random=${i}`,
             }));
 
-            const uniqueEvents = [
+            const events = [
                 (book, btn) => alert(`Wypożyczono ${book.title}`),
                 (book, btn) => { btn.style.backgroundColor = "green"; btn.innerText = "Wypożyczono!"; },
                 (book, btn) => book.style.border = "2px solid red",
@@ -90,7 +90,7 @@
                 
                 const button = document.getElementById(`btn${index}`);
                 button.addEventListener("click", () => {
-                    uniqueEvents[index](bookElement, button);
+                    events[index](bookElement, button);
                 });
             });
         
